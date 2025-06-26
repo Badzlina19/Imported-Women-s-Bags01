@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bags Collection | Gaya Mewah, Harga Ramah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-image {
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .gold-text {
+            color: #D4AF37;
+        }
+        
+        .price-tag {
+            position: relative;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .price-tag::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #F4D03F, #D4AF37);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .countdown-item {
+            min-width: 60px;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .flash-sale {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-serif text-xl font-bold gold-text">LUXE COLLECTION</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#produk" class="text-gray-700 hover:text-gray-900 transition">Produk</a>
+                    <a href="#keunggulan" class="text-gray-700 hover:text-gray-900 transition">Keunggulan</a>
+                    <a href="#testimoni" class="text-gray-700 hover:text-gray-900 transition">Testimoni</a>
+                    <a href="#pesan" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">Pesan Sekarang</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#produk" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Produk</a>
+                <a href="#keunggulan" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Keunggulan</a>
+                <a href="#testimoni" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Testimoni</a>
+                <a href="#pesan" class="block px-3 py-2 rounded-md text-base font-medium bg-black text-white hover:bg-gray-800">Pesan Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-image h-screen pt-16 flex items-center justify-center" style="background-image: url('https://down-id.img.susercontent.com/file/sg-11134201-7rasa-ma94jkr8nfc731.webp');">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center fade-in">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white mb-4">Gaya Mewah, Harga Ramah</h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">Koleksi tas wanita impor premium untuk penampilan yang selalu stylish</p>
+            
+            <div class="price-tag inline-block rounded-lg mb-8">
+                <div class="text-gray-500 line-through text-lg">Harga Normal: Rp 277.500</div>
+                <div class="text-red-600 font-bold text-2xl">Promo Hari Ini: Rp 185.000</div>
+            </div>
+            
+            <div class="flash-sale bg-red-600 text-white inline-block px-6 py-3 rounded-full mb-8">
+                <span class="font-bold">🔥 FLASH SALE 24 JAM!</span> Hanya untuk 50 Fashionista Pertama!
+            </div>
+            
+            <div class="flex justify-center space-x-4 mb-8">
+                <div class="bg-white bg-opacity-90 rounded-full p-3 flex items-center">
+                    <i class="fas fa-eye text-gray-700 mr-2"></i>
+                    <span class="font-medium" id="view-counter">2,100+</span> sedang melihat
+                </div>
+                <div class="bg-white bg-opacity-90 rounded-full p-3 flex items-center">
+                    <i class="fas fa-box-open text-gray-700 mr-2"></i>
+                    <span class="font-medium" id="stock-counter">12</span> stok tersisa
+                </div>
+            </div>
+            
+            <a href="#pesan" class="bg-black text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition inline-flex items-center">
+                PESAN SEKARANG <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            
+            <div class="mt-12 text-white">
+                <p class="mb-2">Scroll untuk melihat koleksi</p>
+                <i class="fas fa-chevron-down animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="bg-gray-50 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">Promo berakhir dalam:</h3>
+            <div class="flex justify-center space-x-4" id="countdown">
+                <div class="countdown-item bg-white rounded-lg shadow-sm p-4">
+                    <div class="text-3xl font-bold gold-text" id="hours">23</div>
+                    <div class="text-sm text-gray-500">Jam</div>
+                </div>
+                <div class="countdown-item bg-white rounded-lg shadow-sm p-4">
+                    <div class="text-3xl font-bold gold-text" id="minutes">59</div>
+                    <div class="text-sm text-gray-500">Menit</div>
+                </div>
+                <div class="countdown-item bg-white rounded-lg shadow-sm p-4">
+                    <div class="text-3xl font-bold gold-text" id="seconds">59</div>
+                    <div class="text-sm text-gray-500">Detik</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Gallery -->
+    <section id="produk" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Koleksi Tas Premium</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rau6-ma94jj94t7kzf9.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rau5-ma94jk2tn5nrf8.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7raup-ma94jmrnpgo366.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rasq-ma94jmec7kxq69.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rat3-ma94jo2tr2no75.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7ravj-ma94jndasdxhea.webp" alt="Tas Wanita Premium" class="w-full h-80 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="keunggulan" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Keunggulan Produk Kami</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition text-center fade-in">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gem text-2xl gold-text"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Premium Quality Materials</h3>
+                    <p class="text-gray-600">Dibuat dengan bahan berkualitas tinggi yang tahan lama dan mewah, memberikan kesan premium pada setiap detail.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition text-center fade-in">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-2xl gold-text"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Trendy Indonesian Fashion</h3>
+                    <p class="text-gray-600">Desain terkini yang mengikuti tren fashion Indonesia, membuat Anda selalu tampil stylish di setiap kesempatan.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition text-center fade-in">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-2xl gold-text"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Perfect Fit & Comfort</h3>
+                    <p class="text-gray-600">Dirancang untuk kenyamanan maksimal dengan ukuran yang pas dan ergonomis, cocok untuk aktivitas sehari-hari.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition text-center fade-in">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-camera text-2xl gold-text"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Instagram-Perfect Style</h3>
+                    <p class="text-gray-600">Desain yang instagrammable, membuat setiap foto Anda terlihat lebih aesthetic dan menarik perhatian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Apa Kata Pelanggan Kami</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg gold-border">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Barang okay, bahannya juga bagus. Pengirimannya juga cepat, packingnya juga aman pokoknya tidak mengecewakan beli barang di toko ini. Next time bisa order lagi, 😊"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">nindyjulianingrum</p>
+                            <p class="text-sm text-gray-500">kota tanggerang</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg gold-border">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"bagus banget tasnya. sesuai dengan pesanan. pengiriman juga cepat"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">nizza_anhar</p>
+                            <p class="text-sm text-gray-500">surabaya</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg gold-border">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Tas'nya bagus realpict banget aq suka 😍😍makasi 🙏🙏"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">stefhani</p>
+                            <p class="text-sm text-gray-500">kota jakarta pusat</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg gold-border">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Alhamdulillaah ready tasnya cantik Aku suka 😀😀"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">anisa</p>
+                            <p class="text-sm text-gray-500">kota jakarta utara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section id="pesan" class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Pesan Sekarang</h2>
+                <p class="text-gray-600">Isi formulir berikut untuk memesan tas premium Anda</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-xl shadow-sm p-6 md:p-8 gold-border">
+                <div class="price-tag inline-block rounded-lg mb-8 mx-auto text-center">
+                    <div class="text-gray-500 line-through text-lg">Harga Normal: Rp 277.500</div>
+                    <div class="text-red-600 font-bold text-2xl">Promo Hari Ini: Rp 185.000</div>
+                </div>
+                
+                <div class="flash-sale bg-red-600 text-white inline-block px-6 py-3 rounded-full mb-8 mx-auto text-center">
+                    <span class="font-bold">🔥 FLASH SALE 24 JAM!</span> Hanya untuk 50 Fashionista Pertama!
+                </div>
+                
+                <div class="flex justify-center space-x-4 mb-8">
+                    <div class="bg-white rounded-full p-3 flex items-center shadow-sm">
+                        <i class="fas fa-eye text-gray-700 mr-2"></i>
+                        <span class="font-medium" id="view-counter-2">2,100+</span> sedang melihat
+                    </div>
+                    <div class="bg-white rounded-full p-3 flex items-center shadow-sm">
+                        <i class="fas fa-box-open text-gray-700 mr-2"></i>
+                        <span class="font-medium" id="stock-counter-2">12</span> stok tersisa
+                    </div>
+                </div>
+                
+                <div class="mb-6 text-center">
+                    <h3 class="font-serif text-xl font-medium mb-2">Promo berakhir dalam:</h3>
+                    <div class="flex justify-center space-x-4" id="countdown-2">
+                        <div class="countdown-item bg-white rounded-lg shadow-sm p-3">
+                            <div class="text-xl font-bold gold-text" id="hours-2">23</div>
+                            <div class="text-xs text-gray-500">Jam</div>
+                        </div>
+                        <div class="countdown-item bg-white rounded-lg shadow-sm p-3">
+                            <div class="text-xl font-bold gold-text" id="minutes-2">59</div>
+                            <div class="text-xs text-gray-500">Menit</div>
+                        </div>
+                        <div class="countdown-item bg-white rounded-lg shadow-sm p-3">
+                            <div class="text-xl font-bold gold-text" id="seconds-2">59</div>
+                            <div class="text-xs text-gray-500">Detik</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- OrderOnline Embed Code -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="nora" data-product-slug="imported-womens-bags" data-product-id="685d099ef6d0b425a201ee79" id="oo-embed-form-imported-womens-bags-5040" data-origin="orderonline">
+                        <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                    </form>
+                </div>
+                <script>
+                    if (typeof xLogError != 'function') {
+                        var xLogError = function (error) {
+                            var req = new XMLHttpRequest();
+                            var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                            req.open('POST', 'https://api.orderonline.id/log', true);
+                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            req.send(params);
+                        };
+                    }
+                    try {
+                        if (typeof xEmbedScript != 'function') {
+                            var xEmbedScript = function () {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                            };
+                        }
+                        if (typeof xEmbedInit != 'function') {
+                            var xEmbedInit = function (w, n) {
+                                if (w.ooe) return;
+                                n = w.ooe = function() {
+                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                };
+                                if (!w._ooe) w._ooe = n;
+                                n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                            };
+                        }
+                        xEmbedInit(window);
+                        ooe('setup', 'redirect', 'https://nora.orderonline.id');
+                        ooe('init', '5f12e06068e4c06fd45a626d', '685d099ef6d0b425a201ee79', null, 'oo-embed-form-imported-womens-bags-5040', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                        if (!window.jQuery) {
+                            !function(w, d, e, v, id, t, s) {
+                                if (d.getElementById(id)) return;
+                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                t.addEventListener('load', xEmbedScript);
+                                s = d.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s);
+                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                        } else {
+                            xEmbedScript();
+                        }
+                    } catch (e) {
+                        xLogError(e);
+                        throw e;
+                    }
+                </script>
+                <!-- End OrderOnline Embed Code -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-serif text-xl font-bold gold-text mb-4">LUXE COLLECTION</h3>
+                    <p class="text-gray-400">Koleksi tas wanita impor premium untuk penampilan yang selalu stylish dan elegan.</p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#produk" class="text-gray-400 hover:text-white transition">Produk</a></li>
+                        <li><a href="#keunggulan" class="text-gray-400 hover:text-white transition">Keunggulan</a></li>
+                        <li><a href="#testimoni" class="text-gray-400 hover:text-white transition">Testimoni</a></li>
+                        <li><a href="#pesan" class="text-gray-400 hover:text-white transition">Pesan Sekarang</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date();
+            end.setHours(23, 59, 59, 0);
+            
+            const diff = end - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            document.getElementById('hours-2').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes-2').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds-2').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Random view counter
+        function updateViewCounter() {
+            const views = Math.floor(Math.random() * (2500 - 1800 + 1)) + 1800;
+            document.getElementById('view-counter').textContent = views.toLocaleString() + '+';
+            document.getElementById('view-counter-2').textContent = views.toLocaleString() + '+';
+        }
+        
+        // Random stock counter with urgency
+        function updateStockCounter() {
+            const stock = Math.floor(Math.random() * 15) + 1;
+            document.getElementById('stock-counter').textContent = stock;
+            document.getElementById('stock-counter-2').textContent = stock;
+            
+            if (stock < 5) {
+                document.getElementById('stock-counter').parentElement.classList.add('text-red-500');
+                document.getElementById('stock-counter-2').parentElement.classList.add('text-red-500');
+            } else {
+                document.getElementById('stock-counter').parentElement.classList.remove('text-red-500');
+                document.getElementById('stock-counter-2').parentElement.classList.remove('text-red-500');
+            }
+        }
+        
+        setInterval(updateViewCounter, 5000);
+        setInterval(updateStockCounter, 3000);
+        updateViewCounter();
+        updateStockCounter();
+        
+        // Hero image slideshow
+        const heroImages = [
+            'https://down-id.img.susercontent.com/file/sg-11134201-7rasa-ma94jkr8nfc731.webp',
+            'https://down-id.img.susercontent.com/file/sg-11134201-7rau6-ma94jj94t7kzf9.webp',
+            'https://down-id.img.susercontent.com/file/sg-11134201-7rau5-ma94jk2tn5nrf8.webp',
+            'https://down-id.img.susercontent.com/file/sg-11134201-7raup-ma94jmrnpgo366.webp'
+        ];
+        
+        let currentImageIndex = 0;
+        const heroSection = document.querySelector('.hero-image');
+        
+        function changeHeroImage() {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+        }
+        
+        setInterval(changeHeroImage, 5000);
+        
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.opacity = 0;
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
